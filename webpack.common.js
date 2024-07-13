@@ -24,7 +24,7 @@ const config = {
         use: ['html-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|jfif|gif|woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(png|svg|jpg|jpeg|jfif|gif|webp|avif|woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/[name][ext]',
