@@ -21,10 +21,12 @@ const config = {
     rules: [
       {
         test: /\.html$/i,
+        exclude: /node_modules/,
         use: ['html-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|jfif|gif|webp|avif|woff|woff2|eot|ttf|otf)$/i,
+        exclude: /node_modules/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/[name][ext]',

@@ -10,6 +10,7 @@ const config = merge(common, {
     rules: [
       {
         test: /\.css$/i,
+        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
