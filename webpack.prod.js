@@ -33,6 +33,11 @@ const config = merge(common, {
           },
         ],
       },
+      {
+        test: /\.(js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
     ],
   },
 })
