@@ -15,6 +15,7 @@ const config = [
     rules: {
       'no-unused-vars': 'warn',
       'no-empty': 'warn',
+      'no-fallthrough': 'off',
     },
   },
 ]
