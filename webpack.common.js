@@ -13,7 +13,7 @@ const config = {
     static: './dist',
     client: {
       overlay: false,
-      logging: 'none',
+      logging: 'error',
     },
     watchFiles: ['./src/index.html'],
   },
