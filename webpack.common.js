@@ -12,6 +12,7 @@ const config = {
   devServer: {
     static: './dist',
     client: {
+      overlay: false,
       logging: 'none',
     },
     watchFiles: ['./src/index.html'],
