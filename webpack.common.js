@@ -11,6 +11,9 @@ const config = {
   },
   devServer: {
     static: './dist',
+    client: {
+      logging: 'none',
+    },
     watchFiles: ['./src/index.html'],
   },
   stats: {
