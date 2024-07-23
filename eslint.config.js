@@ -1,5 +1,5 @@
-const globals = require('globals')
-const pluginJs = require('@eslint/js')
+import globals from 'globals'
+import pluginJs from '@eslint/js'
 
 const config = [
   {
@@ -20,4 +20,4 @@ const config = [
   },
 ]
 
-module.exports = config
+export default config

@@ -2,6 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "main": "src/js/main.js",
+  "type": "module",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js",

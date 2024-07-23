@@ -1,11 +1,11 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import path from 'path'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const config = {
   entry: ['./src/js/main.js', './src/css/main.css'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(import.meta.dirname, 'dist'),
     clean: true,
     filename: '[name].bundle.js',
   },
@@ -19,7 +19,6 @@ const config = {
   },
   stats: {
     preset: 'minimal',
-    loggingDebug: ['sass-loader'],
   },
   module: {
     rules: [
@@ -49,4 +48,4 @@ const config = {
   ],
 }
 
-module.exports = config
+export default config

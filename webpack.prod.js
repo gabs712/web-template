@@ -1,10 +1,10 @@
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common')
-const postcssConfig = require('./postcss.config')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin')
+import webpackMerge from 'webpack-merge'
+import common from './webpack.common.js'
+import postcssConfig from './postcss.config.js'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlMinimizerPlugin from 'html-minimizer-webpack-plugin'
 
-const config = merge(common, {
+const config = {
   mode: 'production',
   devtool: 'source-map',
   optimization: {
@@ -41,6 +41,6 @@ const config = merge(common, {
       },
     ],
   },
-})
+}
 
-module.exports = config
+export default webpackMerge.merge(common, config)

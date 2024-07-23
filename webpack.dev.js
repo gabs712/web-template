@@ -1,9 +1,9 @@
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common')
-const postcssConfig = require('./postcss.config')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+import webpackMerge from 'webpack-merge'
+import common from './webpack.common.js'
+import postcssConfig from './postcss.config.js'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-const config = merge(common, {
+const config = {
   mode: 'development',
   devtool: 'inline-source-map',
   module: {
@@ -27,6 +27,6 @@ const config = merge(common, {
       },
     ],
   },
-})
+}
 
-module.exports = config
+export default webpackMerge.merge(common, config)
